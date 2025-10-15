@@ -41,6 +41,7 @@ def generate():
             next_char = itos[next_idx]
             generated.append(next_char)
             context_copy = context_copy[1:] + [next_idx]
+            
         suggestions.append(''.join(generated))
 
     return jsonify({'suggestions': suggestions})
